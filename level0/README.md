@@ -1,5 +1,7 @@
 Comment trouver le flag0
 
+ls -l
+
 on a un executable level0 quand on le lance il segfault, si on met 1 argument il repond "No !"
 
 Comme pour SnowFall on va disassemble le code
