@@ -4,7 +4,7 @@ On a encore un programme quand on le disassemble on voit que y'a une fonction ge
 
 info function
 
-On voit que le main a une function gets appelée ecrire dans ce buffer (potentiel overflow)
+On voit que le main a une function gets appelée on peut ecrire dans ce buffer (potentiel overflow)
 
 on voit que la function RUN n'est pas execute dans le main
 
