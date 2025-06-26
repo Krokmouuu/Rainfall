@@ -12,6 +12,10 @@ disassemble main
 
 Et maintenant on a des adresse, il y en a une avec "cmp" donc une comparaison de "%eax" avec "0x1a7" en decimal ce qui donne 423
 
+On comprend que c'est ce parametre qui doit etre donne a l'executable :
+
+./level0 423
+
 comme les 3 regles de la cybersecurite
 
 Qui suis-je ? / Ou suis-je ? / Que puis-je faire ? 
