@@ -1,0 +1,17 @@
+Decompile bonus0:
+main + 2 fonctions
+
+voir source.c
+
+gdb -q bonus0
+
+run
+
+(injecte des characters (20 pour le max de strncpy dans la fonction p()))
+
+(puis injecte 4095 characters pour remplir le buffer(avec le pattern generator))
+
+info registers
+
+
+
