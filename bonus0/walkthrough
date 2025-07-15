@@ -1,7 +1,6 @@
 Decompile bonus0:
-main + 2 fonctions
-
-voir source.c
+-> main + 2 fonctions
+(voir source.c)
 
 gdb -q bonus0
 
@@ -11,7 +10,8 @@ run
 
 (puis injecte 4095 characters pour remplir le buffer(avec le pattern generator))
 
+"0x41336141 in ?? ()" -> cette addresse est a retenir
+
 info registers
 
-
-
+On voit l'action eip
