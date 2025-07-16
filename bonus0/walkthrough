@@ -24,6 +24,10 @@ info frame
 
 On voit si nos pattern sont pointee et vers ou on va devoir situe le SHELLCODE
 
+shellcode /bin/sh linux :
+https://shell-storm.org/shellcode/files/shellcode-827.html
+
+
 
 
 
