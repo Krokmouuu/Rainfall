@@ -1,38 +1,14 @@
-On disas le main et on voit qu'il y a beaucoup de comparaison
+En decompilant le code on voit qu'il y a des comparaisons avec auth service et login et il faut que auth[32] soit different de 0 pour passer l'exercice
 
-ligne 93 on a une valeur qui se compare 
+auth est alloue de 4 donc auth[4]
+il y a donc un probleme car auth[32] n'est pas alloue donc la comparaison n'est pas vraiment possible
+grace a service qui fait un strdup + 7 (et donc touche a la memoire du malloc) il faut depasser l'espace de 32 bytes
 
-donc x/s + l'address : 0x8048819
-
-x/s 0x8048819
-
-on voit donc que la chaine compare est : "auth "
-
-ensuite ligne 228 on a 0x804881f
-
-x/s 0x804881f
-
-on voit que c'est "reset"
-
-ensuite ligne 282 on a 0x8048825
-
-on voit que c'est "service"
-
-ensuite ligne 343 on a 0x804882d
-
-on voit que c'est "login"
-
-ensuite ligne 418 on a "Password:\n"
-
-On va donc tout faire dans l'ordre
-
-On va s'identifier en demandant le service login, mettant le mot de passe, en redemandant le service login et passer au niveau 9.
+on force une nouvelle allocation juste après celle de auth. En plaçant une chaîne de 33 caractères
 
 "auth "
-"service"
+"service" + autant de caracteres pour augmenter le padding pour qu'il soit superieur a 32
 "login"
-Password:\n
-"service"
-"login"
+gg
 
 cat /home/user/level9/.pass
