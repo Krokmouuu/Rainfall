@@ -3,11 +3,12 @@ il a une fonction V
 il y a fgets qui est protegé contre les buffer overflow
 
 et qu'il a une comparaison de "64"
+(qd on decompile, on voit que dans la fonction v il y a un system /bin/sh donc on veut acceder a ca, seulement le if compare une variable "m" a 64)
 
 0x080484df <+59>:	cmp    $0x40,%eax
 
-on cherche toute les variables du programme grace a info variable 
-on cherche a savoir l'adresse de la variable m qui contient 64 avec print &m on obtient : 0x804988c
+on cherche toute les variables du programme grace a "info variable" (car m n'est defini nul part dans les decompilations)
+<!-- on cherche a savoir l'adresse de la variable m qui contient 64 avec print &m on obtient : 0x804988c (pas besoin)-->
 
 mais il y a un printf qu'on va manipuler pour changer la variable a l'adresse 0x804988c, on peut donc faire un format string attack
 
@@ -15,10 +16,12 @@ le flag %x de printf permet de print l'adresse en format hexadécimal
 
 on va essayer de trouver ou se trouve l'adresse avec 
 
+(python -c 'print "CCCC %x %x %x %x %x %x"'; cat) | ./level3
+
 python -c 'print "CCCC %x %x %x %x %x %x"' > /tmp/test
 cat /tmp/test - | ./level3
 
-la ou ca se repete c'est la 4 eme position donc on va mettre l'adresse de la variable m qui est : \x8c\x98\x04\x08
+la ou ca se repete c'est la 4 eme position (43434343) donc on va mettre l'adresse (little-endian) de la variable m qui est : \x8c\x98\x04\x08
 
 python -c 'print "\x8c\x98\x04\x08 %x %x %x %x"' > /tmp/exploit
 

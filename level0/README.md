@@ -10,7 +10,7 @@ gdb -q ./level0
 
 disassemble main
 
-Et maintenant on a des adresse, il y en a une avec "cmp" donc une comparaison de "%eax" avec "0x1a7" en decimal ce qui donne 423
+Et maintenant on a des adresse, juste apres un atoi donc on peut imaginer que c'est la la fonction dans laquelle on va mettre le parametre, il y en a une avec "cmp" donc une comparaison de "%eax" avec "0x1a7" en decimal ce qui donne 423 (https://www.rapidtables.com/convert/number/hex-to-decimal.html?x=1A7)
 
 On comprend que c'est ce parametre qui doit etre donne a l'executable :
 
